@@ -3,7 +3,7 @@ from datetime import datetime
 from erpnext.controllers.accounts_controller import get_taxes_and_charges
 from frappe.model.mapper import get_mapped_doc
 from frappe.utils import add_days, today, date_diff, getdate, add_months
-from propms.lease_invoice import getDueDate
+from property.lease_invoice import getDueDate
 import calendar
 import frappe
 import frappe.permissions

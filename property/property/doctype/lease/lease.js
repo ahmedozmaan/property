@@ -49,7 +49,7 @@ frappe.ui.form.on('Lease', {
 var make_lease_invoice_schedule = function(frm){
 	var doc = frm.doc;
 	frappe.call({
-		method: 		"propms.property_management_solution.doctype.lease.lease.make_lease_invoice_schedule",
+		method: 		"property.property.doctype.lease.lease.make_lease_invoice_schedule",
 		args: {leasedoc: doc.name},
 		callback: function(){
 			cur_frm.reload_doc();
@@ -59,7 +59,7 @@ var make_lease_invoice_schedule = function(frm){
 
 var generate_pending_invoice = function(){
 	frappe.call({
-		method: "propms.lease_invoice.leaseInvoiceAutoCreate",
+		method: "property.lease_invoice.leaseInvoiceAutoCreate",
 		args: {},
 		callback: function(){
 			cur_frm.reload_doc();
@@ -72,7 +72,7 @@ var getAllLease = function(){
 		'Are you sure to initiate this long process?',
 		function(){
 			frappe.call({
-				method: "propms.property_management_solution.doctype.lease.lease.getAllLease",
+				method: "property.property.doctype.lease.lease.getAllLease",
 				args: {},
 				callback: function(){
 					cur_frm.reload_doc();

@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 from frappe.utils import add_days, today, getdate, add_months
-from propms.auto_custom import app_error_log, makeInvoiceSchedule, getDateMonthDiff
+from property.auto_custom import app_error_log, makeInvoiceSchedule, getDateMonthDiff
 
 
 class Lease(Document):
